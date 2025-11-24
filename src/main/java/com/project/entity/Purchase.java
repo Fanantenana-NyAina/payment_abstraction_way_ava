@@ -9,14 +9,6 @@ public class Purchase {
         this.amount = amount;
     }
 
-    public Payment getPaymentMethod() {
-        return paymentMethod;
-    }
-
-    public Double getAmount() {
-        return amount;
-    }
-
     public Double processPayment() {
         Double total = paymentMethod.pay(amount);
         return total;
