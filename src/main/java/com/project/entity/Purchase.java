@@ -17,7 +17,8 @@ public class Purchase {
         return amount;
     }
 
-    public void processPayment() {
-        paymentMethod.pay(amount);
+    public Double processPayment() {
+        Double total = paymentMethod.pay(amount);
+        return total;
     }
 }
