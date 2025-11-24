@@ -1,21 +1,23 @@
 package com.project.entity;
 
-import com.project.entity.methode.PaymentMethode;
-
 public class Purchase {
-    private PaymentMethode paymentMethod;
+    private Payment paymentMethod;
     private Double amount;
 
-    public Purchase(PaymentMethode paymentMethod, Double amount) {
+    public Purchase(Payment paymentMethod, Double amount) {
         this.paymentMethod = paymentMethod;
         this.amount = amount;
     }
 
-    public PaymentMethode getPaymentMethod() {
+    public Payment getPaymentMethod() {
         return paymentMethod;
     }
 
     public Double getAmount() {
         return amount;
+    }
+
+    public void processPayment() {
+        paymentMethod.pay(amount);
     }
 }
